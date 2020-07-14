@@ -1,1 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;1,400;1,900&display=swap');
 
+:root{
+    --primary-color: #129b0d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+}
+
+h1, h2, h3, h4{
+    color: #fff;
+    line-height: 2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.showcase{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../image/pexels-photo-96633.jpeg) no-repeat center center/cover;
+}
+
+
+.showcase::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+     
+}
+
+.showcase-top {
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+.showcase-top .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-top a{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+    z-index: 2;
+}
+
+.showcase-content h1{
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1rem;
+    margin: 0 0 2rem;
+}
+
+.showcase-content p{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin: 1rem 2rem;
+}
+
+.showcase-content a{
+    margin-top: 2rem;
+}
+
+
+
+.section-b {
+    position: relative;
+    background: url(../image/pexels-photo-205717.jpeg) no-repeat bottom center/cover;
+    height: 600px;
+}
+
+.section-b-inner{
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 860px;
+    padding: 5rem 0;
+   
+}
+
+.section-b-inner h3{
+    font-size: 2rem;
+}
+
+.section-b-inner h2{
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-top: 1rem;
+}
+
+.section-b-inner p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+section.gallery{
+    background: #000;
+    width: 100%;
+}
+
+.img-container{
+    position: relative;
+    display: inline-block;
+}
+
+.img-container .text-container{
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.6);
+    transition: all .3s ease-in-out;
+}
+
+.img-container .text-container:hover{
+    opacity: 1;
+}
+
+.img-container .text-container p {
+   font-size: 3rem;
+   line-height: 3rem;
+}
+
+section.gallery .gallery-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "box1 box2 box2"
+    "box1 box3 box3";
+   
+}
+
+section.gallery .gallery-container a:first-child{
+    grid-area: box1;
+    padding: 1rem;
+}
+
+section.gallery .gallery-container a:nth-child(2){
+    grid-area: box2;
+    padding: 1rem;
+}
+
+section.gallery .gallery-container a:nth-child(3){
+    grid-area: box3;
+    padding: 1rem;
+}
+
+section.gallery .gallery-container a img{
+     
+    width: 100%;
+}
+
+.news-letter{
+    width: 100%;
+    height: 400px;
+    background: rgb(32, 32, 32);
+}
+
+.news-letter-inner h2{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.news-letter-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+/* Email */
+.email-form{
+    width: 100%;
+    display: inline-block;
+    background-color: #555;
+    position: relative;
+    border-radius: 20px;
+    line-height: 0;
+    margin-top: 1rem;
+}
+
+.email-form .form-control{
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    color: #ddd;
+    background-color: transparent;
+    font-family: inherit;
+    margin: 0;
+    padding: 0 3rem 0 1.5rem;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.email-form .submit{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #eee;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+ 
+/* Footer */
+
+.footer{
+    max-width: 75%;
+    margin: 2rem auto;
+    overflow: auto;
+}
+
+.footer, .footer a{
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li{
+    line-height: 1.9;
+}
+ 
+ 
+ 
+
+ 
+
+
+/* Utilities */
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 2px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+.btn-xl{
+    font-size: 1.8rem;
+    padding: 1rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.btn-lg{
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+.btn-icon{
+    margin-left: 1rem;
+}
